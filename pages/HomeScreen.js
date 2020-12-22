@@ -9,7 +9,7 @@ export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     realm = new Realm({
-      path: 'UserDatabase.realm',
+      path: 'UserDatabase2.realm',
       schema: [
         {
           name: 'user_details',
@@ -18,12 +18,12 @@ export default class HomeScreen extends React.Component {
             user_name: 'string',
             user_contact: 'string',
             user_address: 'string',
+            image: 'data?',
           },
         },
       ],
     });
   }
-
   render() {
     return (
       <View
@@ -53,6 +53,7 @@ export default class HomeScreen extends React.Component {
           title="Delete"
           customClick={() => this.props.navigation.navigate('Delete')}
         />
+        
       </View>
     );
   }

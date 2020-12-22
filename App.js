@@ -12,6 +12,7 @@ import ViewUser from './pages/ViewUser';
 import ViewAllUser from './pages/ViewAllUser';
 import DeleteUser from './pages/DeleteUser';
 
+
 const App = createStackNavigator({
   HomeScreen: {
     screen: HomeScreen,
@@ -61,5 +62,6 @@ const App = createStackNavigator({
       headerTintColor: '#ffffff',
     },
   },
+  
 });
 export default createAppContainer(App);

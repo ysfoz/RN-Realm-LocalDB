@@ -12,8 +12,9 @@ export default class RegisterUser extends React.Component {
       user_name: '',
       user_contact: '',
       user_address: '',
+      image: ''
     };
-    realm = new Realm({ path: 'UserDatabase.realm' });
+    realm = new Realm({ path: 'UserDatabase2.realm' });
   }
 
   register_user = () => {
@@ -59,6 +60,10 @@ export default class RegisterUser extends React.Component {
     }
   };
 
+  add_image = () => {
+    const { image } = this.state;
+  }
+
   render() {
     return (
       <View style={{ backgroundColor: 'white', flex: 1 }}>
@@ -83,6 +88,10 @@ export default class RegisterUser extends React.Component {
               numberOfLines={5}
               multiline={true}
               style={{ textAlignVertical: 'top' }}
+            />
+            <Mybutton
+              title="Add image"
+              // customClick={this.register_user.bind(this)}
             />
             <Mybutton
               title="Submit"
